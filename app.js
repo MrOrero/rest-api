@@ -55,7 +55,7 @@ app.use((error, req, res, next) => {
 
 })
 
-mongoose.connect('mongodb+srv://Orero:orero2002@cluster0.zf1ulpl.mongodb.net/blog?retryWrites=true&w=majority')
+mongoose.connect('MONGODBURL')
 .then(result => {
     const server = app.listen(8080)  
     const io = require('./socket').init(server)
